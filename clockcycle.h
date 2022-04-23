@@ -4,17 +4,17 @@
 #include <stdint.h>
 
 #ifdef __clang__
-static inline uint64_t aimos_clock_read() {
+static inline uint64_t clock_read() {
 	return __builtin_readcyclecounter();
 }
 #elif defined(__GNUC__)
 #if defined(__i386__) || defined(__x86_64__) || defined(__amd64__)
 #include <x86intrin.h>
-static inline uint64_t aimos_clock_read() {
+static inline uint64_t clock_read() {
     return __rdtsc();
 }
 #else
-uint64_t aimos_clock_read(void)
+uint64_t clock_read(void)
 {
   unsigned int tbl, tbu0, tbu1;
 
