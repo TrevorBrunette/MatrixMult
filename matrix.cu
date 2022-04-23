@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include "matrix.h"
 
- __global__ void multiplyMatrix(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3, int size, int quantity){
+ __global__ void multiplyMatrix(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3, int size, int quantity, int offset){
     int thread_index = blockIdx.x * blockDim.x + threadIdx.x;
     if(thread_index < size*quantity){
         return;
     }
+    // index = y * size + x;
+    int x = thread_index % size;
+    int y = thread_index / size;
+    double sum = 0;
+    for(int k = 0; k < size; ++k){
+        sum += matrix1[y*size + k] * matrix2[k*size + x];
+    }
+    matrix3[thread_index] = sum;
  }
 
 
@@ -34,8 +42,8 @@ extern "C" void initCuda(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3
 
 }
 
-extern "C" void multiply(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3, int size, int quantity) {
+extern "C" void multiply(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3, int size, int quantity, int offset) {
 
     int block_count = (size*quantity) / 32 + 1;
-    multiplyMatrix<<<block_count,32>>>((matrix1, matrix2, matrix3, size, quantity));
+    multiplyMatrix<<<block_count,32>>>(matrix1, matrix2, matrix3, size, quantity, offset);
 }

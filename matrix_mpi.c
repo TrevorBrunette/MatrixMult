@@ -122,13 +122,15 @@ void cuda_worker_routine(int rank, int world_size, int size) {
     int worker_count = world_size - 1;
     int rows_per_worker = size/worker_count;
 
-    for(int row = offset; row < (offset+quantity); ++row) {
-        for(int col = 0; col < size; ++col) {
-            for(int k = 0; k < size; ++k) {
-                matrix3[(row-offset) * size + col] += matrix1[(row-offset) * size + k] * matrix2[k * size + col];
-            }
-        }
-    }
+    initCuda(matrix1, matrix2, matrix3, size, rank - 1, quantity);
+    multiply(matrix1, matrix2, matrix3, size, quantity);
+    /* for(int row = offset; row < (offset+quantity); ++row) { */
+    /*     for(int col = 0; col < size; ++col) { */
+    /*         for(int k = 0; k < size; ++k) { */
+    /*             matrix3[(row-offset) * size + col] += matrix1[(row-offset) * size + k] * matrix2[k * size + col]; */
+    /*         } */
+    /*     } */
+    /* } */
 
     MPI_Send(&offset, 1, MPI_INT, MASTER, 2, MPI_COMM_WORLD);
     MPI_Send(&quantity, 1, MPI_INT, MASTER, 2, MPI_COMM_WORLD);

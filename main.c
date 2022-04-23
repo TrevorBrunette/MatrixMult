@@ -27,7 +27,6 @@ int main(int argc, char** argv) {
         randomSquareMat(matrix2, size);
 
         long long timein,timeout;
-        multiply(matrix1, matrix2, parallel_output, size, 1);
 
         timein = clock_read();
         sequentialMultiply(matrix1, matrix2, serial_output, size);
