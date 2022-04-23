@@ -6,9 +6,11 @@
 #include "matrix.h"
 #include <time.h>
 
+#define MASTER 0   // taskid of first task
 
 int main(int argc, char** argv) {
-    srand(time(NULL));
+    const int size = 200;
+
     int rank, world_size;
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
