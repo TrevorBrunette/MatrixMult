@@ -1,4 +1,5 @@
 #include <mpi.h>
+#include <stdio.h>
 #include "matrix_mpi.h"
 
 void master_routine(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3, int rank, int world_size, int size) {
@@ -75,6 +76,7 @@ void cuda_master_routine(Datatype* matrix1, Datatype* matrix2, Datatype* matrix3
     int leftovers = size%worker_count;
     int offset = 0;
     int quantity = 0;
+
     for(int dest = 1; dest < world_size; ++dest) {
         quantity = rows_per_worker;
         if(dest <= leftovers) {
@@ -122,15 +124,8 @@ void cuda_worker_routine(int rank, int world_size, int size) {
     int worker_count = world_size - 1;
     int rows_per_worker = size/worker_count;
 
-    initCuda(matrix1, matrix2, matrix3, size, rank - 1, quantity);
+    //rank - 1 so as to not assign a gpu to the master rank
     multiply(matrix1, matrix2, matrix3, size, quantity);
-    /* for(int row = offset; row < (offset+quantity); ++row) { */
-    /*     for(int col = 0; col < size; ++col) { */
-    /*         for(int k = 0; k < size; ++k) { */
-    /*             matrix3[(row-offset) * size + col] += matrix1[(row-offset) * size + k] * matrix2[k * size + col]; */
-    /*         } */
-    /*     } */
-    /* } */
 
     MPI_Send(&offset, 1, MPI_INT, MASTER, 2, MPI_COMM_WORLD);
     MPI_Send(&quantity, 1, MPI_INT, MASTER, 2, MPI_COMM_WORLD);
