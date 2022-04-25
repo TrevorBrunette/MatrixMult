@@ -3,17 +3,17 @@
 
 #include <stdint.h>
 
-#ifdef __clang__
-static inline uint64_t clock_read() {
-	return __builtin_readcyclecounter();
-}
-#elif defined(__GNUC__)
-#if defined(__i386__) || defined(__x86_64__) || defined(__amd64__)
-#include <x86intrin.h>
-static inline uint64_t clock_read() {
-    return __rdtsc();
-}
-#else
+/* #ifdef __clang__ */
+/* static inline uint64_t clock_read() { */
+/* 	return __builtin_readcyclecounter(); */
+/* } */
+/* #elif defined(__GNUC__) */
+/* #if defined(__i386__) || defined(__x86_64__) || defined(__amd64__) */
+/* #include <x86intrin.h> */
+/* static inline uint64_t clock_read() { */
+/*     return __rdtsc(); */
+/* } */
+/* #else */
 uint64_t clock_read(void)
 {
   unsigned int tbl, tbu0, tbu1;
@@ -26,8 +26,8 @@ uint64_t clock_read(void)
 
   return (((uint64_t)tbu0) << 32) | tbl;
 }
-#endif
-#endif
+/* #endif */
+/* #endif */
 
 
 #endif // CLOCKCYCLE_H

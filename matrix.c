@@ -37,6 +37,7 @@ void printMatrix(const Datatype* matrix, int size) {
         printf("%12.2lf ", matrix[i]);
         if(i % size == size - 1) printf("\n");
     }
+    printf("\n");
 }
 
 void randomSquareMat(Datatype* matrix, int size) {

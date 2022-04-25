@@ -1,0 +1,121 @@
++ '[' x4 = x ']'
++ '[' x4 = x ']'
++ srun hostname -s
++ sort -u
++ grep -q 'release 7\.' /etc/redhat-release
++ '[' 1 -eq 0 ']'
++ awk '{ print $0 " slots=4"; }' /tmp/hosts.1874030
++ mv /tmp/tmp.1874030 /tmp/hosts.1874030
++ module load spectrum-mpi
+++ /usr/share/lmod/lmod/libexec/lmod bash load spectrum-mpi
++ eval 'CCI_SMPI_SET_TS=2021082400;' export 'CCI_SMPI_SET_TS;' '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/ibm/spectrum_mpi/profilesupport/lib:1\;/opt/ibm/spectrum_mpi/lib:1\;/opt/mellanox/sharp/lib:1\;/opt/mellanox/hcoll/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/opt/ibm/spectrum_mpi/profilesupport/lib:/opt/ibm/spectrum_mpi/lib:/opt/mellanox/sharp/lib:/opt/mellanox/hcoll/lib;' export 'LD_LIBRARY_PATH;' 'LMOD_FAMILY_MPI=spectrum-mpi;' export 'LMOD_FAMILY_MPI;' 'LMOD_FAMILY_MPI_VERSION=10.4;' export 'LMOD_FAMILY_MPI_VERSION;' '__LMOD_REF_COUNT_LOADEDMODULES=spectrum-mpi/10.4:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=spectrum-mpi/10.4;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/opt/ibm/spectrum_mpi/share/man:1;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/opt/ibm/spectrum_mpi/share/man;' export 'MANPATH;' '__LMOD_REF_COUNT_MODULEPATH=/gpfs/u/software/dcs-rhel8/modulefiles/.spectrum-mpi/10.4:1\;/gpfs/u/software/dcs-rhel8/modulefiles:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/gpfs/u/software/dcs-rhel8/modulefiles/.spectrum-mpi/10.4:/gpfs/u/software/dcs-rhel8/modulefiles;' export 'MODULEPATH;' 'MPI_ROOT=/opt/ibm/spectrum_mpi;' export 'MPI_ROOT;' 'OPAL_LIBDIR=/opt/ibm/spectrum_mpi/lib;' export 'OPAL_LIBDIR;' 'PAMI_ENABLE_STRIPING=0;' export 'PAMI_ENABLE_STRIPING;' 'PAMI_IBV_ADAPTER_AFFINITY=1;' export 'PAMI_IBV_ADAPTER_AFFINITY;' 'PAMI_IBV_ENABLE_OOO_AR=1;' export 'PAMI_IBV_ENABLE_OOO_AR;' '__LMOD_REF_COUNT_PATH=/opt/ibm/spectrum_mpi/bin:1\;/usr/lpp/mmfs/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/gpfs/u/home/PCPB/PCPBhbnw/.local/bin:1\;/gpfs/u/home/PCPB/PCPBhbnw/bin:1;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/opt/ibm/spectrum_mpi/bin:/usr/lpp/mmfs/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/gpfs/u/home/PCPB/PCPBhbnw/.local/bin:/gpfs/u/home/PCPB/PCPBhbnw/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/gpfs/u/software/dcs-rhel8/modulefiles/spectrum-mpi/10.4.lua:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/gpfs/u/software/dcs-rhel8/modulefiles/spectrum-mpi/10.4.lua;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIm1waSJdPSJzcGVjdHJ1bS1tcGkiLH0sbVQ9e1sic3BlY3RydW0tbXBpIl09e1siZm4iXT0iL2dwZnMvdS9zb2Z0d2FyZS9kY3MtcmhlbDgvbW9kdWxlZmlsZXMvc3BlY3RydW0tbXBpLzEwLjQubHVhIixbImZ1bGxOYW1lIl09InNwZWN0cnVtLW1waS8xMC40IixbImxvYWRPcmRlciJdPTEscHJvcFQ9e3N0YXRlPXtbInRlc3RpbmciXT0xLH0sfSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzcGVjdHJ1bS1tcGkiLH0sfSxtcGF0aEE9eyIvZ3Bmcy91L3NvZnR3;' export '_ModuleTable001_;' '_ModuleTable002_=YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcy8uc3BlY3RydW0tbXBpLzEwLjQiLCIvZ3Bmcy91L3NvZnR3YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvZ3Bmcy91L3NvZnR3YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcyIsfQ==;' export '_ModuleTable002_;' '_ModuleTable_Sz_=2;' export '_ModuleTable_Sz_;'
+++ CCI_SMPI_SET_TS=2021082400
+++ export CCI_SMPI_SET_TS
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/opt/ibm/spectrum_mpi/profilesupport/lib:1;/opt/ibm/spectrum_mpi/lib:1;/opt/mellanox/sharp/lib:1;/opt/mellanox/hcoll/lib:1'
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/opt/ibm/spectrum_mpi/profilesupport/lib:/opt/ibm/spectrum_mpi/lib:/opt/mellanox/sharp/lib:/opt/mellanox/hcoll/lib
+++ export LD_LIBRARY_PATH
+++ LMOD_FAMILY_MPI=spectrum-mpi
+++ export LMOD_FAMILY_MPI
+++ LMOD_FAMILY_MPI_VERSION=10.4
+++ export LMOD_FAMILY_MPI_VERSION
+++ __LMOD_REF_COUNT_LOADEDMODULES=spectrum-mpi/10.4:1
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=spectrum-mpi/10.4
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH=/opt/ibm/spectrum_mpi/share/man:1
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/opt/ibm/spectrum_mpi/share/man
+++ export MANPATH
+++ __LMOD_REF_COUNT_MODULEPATH='/gpfs/u/software/dcs-rhel8/modulefiles/.spectrum-mpi/10.4:1;/gpfs/u/software/dcs-rhel8/modulefiles:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/gpfs/u/software/dcs-rhel8/modulefiles/.spectrum-mpi/10.4:/gpfs/u/software/dcs-rhel8/modulefiles
+++ export MODULEPATH
+++ MPI_ROOT=/opt/ibm/spectrum_mpi
+++ export MPI_ROOT
+++ OPAL_LIBDIR=/opt/ibm/spectrum_mpi/lib
+++ export OPAL_LIBDIR
+++ PAMI_ENABLE_STRIPING=0
+++ export PAMI_ENABLE_STRIPING
+++ PAMI_IBV_ADAPTER_AFFINITY=1
+++ export PAMI_IBV_ADAPTER_AFFINITY
+++ PAMI_IBV_ENABLE_OOO_AR=1
+++ export PAMI_IBV_ENABLE_OOO_AR
+++ __LMOD_REF_COUNT_PATH='/opt/ibm/spectrum_mpi/bin:1;/usr/lpp/mmfs/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/gpfs/u/home/PCPB/PCPBhbnw/.local/bin:1;/gpfs/u/home/PCPB/PCPBhbnw/bin:1'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/opt/ibm/spectrum_mpi/bin:/usr/lpp/mmfs/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/gpfs/u/home/PCPB/PCPBhbnw/.local/bin:/gpfs/u/home/PCPB/PCPBhbnw/bin
+++ export PATH
+++ __LMOD_REF_COUNT__LMFILES_=/gpfs/u/software/dcs-rhel8/modulefiles/spectrum-mpi/10.4.lua:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/gpfs/u/software/dcs-rhel8/modulefiles/spectrum-mpi/10.4.lua
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIm1waSJdPSJzcGVjdHJ1bS1tcGkiLH0sbVQ9e1sic3BlY3RydW0tbXBpIl09e1siZm4iXT0iL2dwZnMvdS9zb2Z0d2FyZS9kY3MtcmhlbDgvbW9kdWxlZmlsZXMvc3BlY3RydW0tbXBpLzEwLjQubHVhIixbImZ1bGxOYW1lIl09InNwZWN0cnVtLW1waS8xMC40IixbImxvYWRPcmRlciJdPTEscHJvcFQ9e3N0YXRlPXtbInRlc3RpbmciXT0xLH0sfSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzcGVjdHJ1bS1tcGkiLH0sfSxtcGF0aEE9eyIvZ3Bmcy91L3NvZnR3
+++ export _ModuleTable001_
+++ _ModuleTable002_=YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcy8uc3BlY3RydW0tbXBpLzEwLjQiLCIvZ3Bmcy91L3NvZnR3YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvZ3Bmcy91L3NvZnR3YXJlL2Rjcy1yaGVsOC9tb2R1bGVmaWxlcyIsfQ==
+++ export _ModuleTable002_
+++ _ModuleTable_Sz_=2
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ mpirun --bind-to core --report-bindings -hostfile /tmp/hosts.1874030 -np 4 /gpfs/u/home/PCPB/PCPBhbnw/scratch/matrix-exe 1
+[dcs229:310171] MCW rank 0 bound to socket 0[core 0[hwt 0-3]]: [BBBB/..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....][..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....]
+[dcs229:310171] MCW rank 1 bound to socket 1[core 20[hwt 0-3]]: [..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....][BBBB/..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....]
+[dcs229:310171] MCW rank 2 bound to socket 0[core 1[hwt 0-3]]: [..../BBBB/..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....][..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....]
+[dcs229:310171] MCW rank 3 bound to socket 1[core 21[hwt 0-3]]: [..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....][..../BBBB/..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../..../....]
+MPI Clockcycles| Size: 10, Ranks: 4
+110388
+81578
+26202
+56537
+10203
+18431
+MPI Clockcycles| Size: 100, Ranks: 4
+2459504
+2524686
+2561069
+2565028
+2539851
+2560679
+MPI Clockcycles| Size: 300, Ranks: 4
+69494270
+49650847
+48042127
+49201868
+66640464
+66680959
+MPI Clockcycles| Size: 500, Ranks: 4
+326160730
+529418137
+571855903
+571021726
+569948193
+484743437
+MPI Clockcycles| Size: 800, Ranks: 4
+1538261245
+1580931249
+1589722643
+1566880278
+1589996840
+1552779735
+MPI Clockcycles| Size: 1000, Ranks: 4
+3157199404
+3156356025
+3215762893
+3347282060
+3322074614
+3265115320
+MPI Clockcycles| Size: 2000, Ranks: 4
+30684201534
+28621300188
+14807078818
+14974129839
+14895641338
+14661304019
+MPI Clockcycles| Size: 3000, Ranks: 4
+75443318638
+75436364673
+75450430736
+75441901603
+75435432181
+75422867204
++ rm /tmp/hosts.1874030
